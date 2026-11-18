@@ -5,7 +5,18 @@
     <title>Portaria de Condomínio</title>
 </head>
 <body>
-    <h1>Página Inicial do Sistema de Condominio</h1>
-    <p>O sistema está funcionando corretamente!</p>
+    <h1>Bem-Vindo à Portaria do Condomínio</h1>
+    <p>Selecione uma opção abaixo:</p>
+    <ul>
+        
+        <li><a href="{% url 'cadastro_morador'%}"> Cadastro de Moradores</a></li>
+        <li><a href="{% url 'cadastro_entregas'%}"> Cadastro de Entregas</a></li>
+        <li><a href="{% url 'verificacao_entradas'%}"> Verificação de Entradas</a></li>
+        <li><a href="{% url 'cadastro_funcionarios'%}"> Cadastro de Funcionários</a></li>
+        <li><a href="{% url 'registro_ocorrencias'%}"> Registro de Ocorrências</a></li>
+   </ul>
+
+
 </body>
+
 </html>
