@@ -8,10 +8,9 @@
     <title>Portaria de Condomínio</title>
 </head>
 
-<body style ="background-image: url('{% static "images/condominio.png" %}');background-size: cover;background-position: center;background-repeat: no-repeat;">
-
-    <h1>Bem-Vindo à Portaria do Condomínio</h1>
-    <p>Selecione uma opção abaixo:</p>
+<body style ="background-image: url('{% static "images/condominio.png" %}');background-size: 400px auto;cover;background-position: center;background-repeat: no-repeat;min-height: 100vh; margin: 0;">
+    <h1 style = "font-size: 50px; color: black;">Bem-Vindo Ao Sistema Portaria do Condomínio</h1>
+    <p style = "font-size: 30px; color: red;">Selecione uma opção abaixo:</p>
     <ul>
         
         <li><a href="{% url 'cadastro_morador'%}"> Cadastro de Moradores</a></li>
