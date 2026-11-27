@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}Portaria{% endblock %} | Condomínio</title>
+<link rel="stylesheet" href="{% static 'portaria/style.css' %}">
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="{% url 'portaria:index' %}">
+<div>Portaria <small>Condomínio</small></div>
+</a>
+<nav class="menu">
+<a class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}" href="{% url 'portaria:index' %}">Início</a>
+<a class="{% if request.resolver_match.url_name == 'verificacao_entradas' %}active{% endif %}" href="{% url 'portaria:verificacao_entradas' %}">Entradas</a>
+<a class="{% if request.resolver_match.url_name == 'registro_ocorrencias' %}active{% endif %}"href="{% url 'portaria:registro_ocorrencias' %}">Ocorrências</a>
+<a class="{% if request.resolver_match.url_name == 'cadastro_morador' %}active{% endif %}" href="{% url 'portaria:cadastro_morador' %}">Moradores</a>
+<a class="{% if request.resolver_match.url_name == 'cadastro_funcionarios' %}active{% endif %}" href="{% url 'portaria:cadastro_funcionarios' %}">Funcionários</a>
+<a class="{% if request.resolver_match.url_name == 'cadastro_entregas' %}active{% endif %}" href="{% url 'portaria:cadastro_entregas' %}">Entregas</a>
+</nav>
+</header>
+<main class="container">
+{% block content %}{% endblock %}
+</main>
+<footer class="footer">
+Sistema Portaria — Controle Condominial
+</footer>
+</body>
+</html>

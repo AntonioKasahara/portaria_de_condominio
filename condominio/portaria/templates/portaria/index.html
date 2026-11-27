@@ -1,0 +1,74 @@
+{% extends "portaria/base.html" %}
+{% load static %}
+
+<html lang="pt-br">
+
+<body>
+<!-- O conteúdo visível da página entrará aqui dentro -->
+</body>
+
+
+<main class="container">
+    <!-- Seções Hero e Dashboard entram aqui no Passo 4 -->
+</main>
+
+
+{% block title %}Início{% endblock %}
+{% block content %}
+<section class="hero">
+<div>
+<span class="tag">Sistema ativo</span>
+<h1>Bem-vindo à <span>Portaria</span></h1>
+<p>Layout mestre herdado com sucesso de base.html!</p>
+<div class="quick">
+<a href="{% url 'portaria:verificacao_entradas' %}">Verificar entradas</a>
+<a href="{% url 'portaria:cadastro_entregas' %}">Registrar entrega</a>
+<a href="{% url 'portaria:registro_ocorrencias' %}">Nova ocorrência</a>
+</div>
+</div>
+</section>
+{% endblock %}
+
+
+
+<section class="hero">
+    <div>
+        <span class="tag">Sistema ativo</span>
+        <h1>Bem-vindo à <span>Portaria</span></h1>
+        <p>Painel de controle do condomínio. Acompanhe entregas, entradas e 
+ocorrências.</p>
+        <div class="quick">
+            <a href="#">Verificar entradas</a>
+            <a href="#">Registrar entrega</a>
+            <a href="#">Nova ocorrência</a>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="section-title">
+        <div><h2>Resumo de hoje</h2><small>Dados estáticos do painel</small></div>
+    </div>
+    <div class="dashboard">
+        <article class="card card--entregas">
+            <div class="card-top"><span class="pill">Entregas</span></div>
+            <h3>Entregas realizadas</h3>
+            <p class="number">24</p>
+            <p class="note">Pacotes e correspondências recebidos na portaria.</p>
+        </article>
+        <article class="card card--entradas">
+            <div class="card-top"><span class="pill">Total: 42</span></div>
+            <h3>Entradas verificadas</h3>
+            <ul class="breakdown">
+                <li>Moradores <strong>18</strong></li>
+                <li>Veículos <strong>12</strong></li>
+                <li>Visitantes <strong>12</strong></li>
+            </ul>
+        </article>
+        <article class="card card--ocorrencias">
+            <div class="card-top"><span class="pill">Acompanhar</span></div>
+            <h3>Ocorrências relatadas</h3>
+            <p class="number">3</p>
+            <p class="note">Registros feitos pela equipe durante o turno.</p>
+        </article>
+    </div>
+</section>

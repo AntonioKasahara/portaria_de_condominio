@@ -21,5 +21,5 @@ import portaria.urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('portaria.urls')), # Conecta as rotas do app portaria na raiz
+    path('', include('portaria.urls', namespace='portaria')), # Conecta as rotas do app portaria na raiz
 ]
